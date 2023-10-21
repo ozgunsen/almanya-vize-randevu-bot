@@ -28,7 +28,7 @@ class WebDriver:
         self._driver.execute_cdp_cmd('Network.setUserAgentOverride', {"userAgent": 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.53 Safari/537.36'})
         return self._driver
 
-    def __exit__(self):
+    def __exit__(self, exc_type, exc_value, exc_tb):
         logging.info("Close the browser")
         self._driver.quit()
 
@@ -127,7 +127,8 @@ class AlmanyaVizeRandevuBot:
             return True
         return False
 
-    def play_sound():
+    @staticmethod
+    def play_sound(self):
         playsound("alarm.wav")
         while True:
             pass
@@ -146,7 +147,7 @@ class AlmanyaVizeRandevuBot:
             for _ in range(30):
                 if self.isSuccess(self, driver):
                     logging.info("SUCCESS!")
-                    self.play_sound
+                    self.play_sound(self)
                 else:
                     logging.info("No appointment yet. Retry submitting the form.")
                     sleep(settings.WAITING_TIME)

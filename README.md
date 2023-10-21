@@ -32,7 +32,7 @@ Before using the script, make sure you have the following prerequisites installe
 4. Navigate to the project directory:
 
    ```bash
-   cd almanya-vize-randevu
+   cd almanya-vize-randevu-bot
    ```
 
 5. Install the required Python packages:
