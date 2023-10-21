@@ -1,0 +1,6 @@
+__pycache__/
+.venv/
+.vscode/
+*.py[cod]
+*$py.class
+settings.py
